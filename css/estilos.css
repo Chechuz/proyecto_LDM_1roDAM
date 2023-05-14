@@ -1,0 +1,248 @@
+:root {
+    --fuente-principal: 'Pacifico';
+    --fuente-alternativa: sans-serif;
+    --tam-fuente-xs: 12px;
+    --tam-fuente-sm: 13px;
+    --tam-fuente-md: 15px;
+    --tam-fuente-lg: 17px;
+    --tam-fuente-xl: 17px;
+    --tam-max-contenedor-x: 1200px;
+    --tam-alto-encabezado-xs: 8vh;
+    --negro: #000;
+    --blanco: #FFF;
+    --fondo-encabezado: #B8D2F4;
+    --fondo-menu: var(--blanco);
+    --fondo-todo: var(--fondo-encabezado);
+    --color-texto: #517104;
+    --color-titulos-claro: #2CDA1C;
+    --color-titulos-oscuro: #1F411C;
+    --color-primario: #517104;
+    --color-secundario: #83A705;
+    --color-opuesto-primario: #894B26;
+    --color-opuesto-secundario: #F58A03;
+    --color-enlace: var(--color-opuesto-primario);
+    --color-enlace-hover: var(--color-opuesto-secundario);
+    --color-transparencia: rgba(0, 0, 0, 0.5);
+}
+
+html {
+    font-family: var(--fuente-principal), var(--fuente-alternativa);
+    /*font-size: var(--tam-fuente-xs);*/
+    background-color: var(--fondo-todo);
+    color: var(--color-texto);
+}
+
+*,
+:after,
+:before {
+    padding: 0;
+    margin: 0
+}
+body {
+    overflow-x: hidden;
+}
+
+#container{
+    position: fixed;
+    width: 3em;
+    height: 3em;
+    bottom: 20px;
+    right: 20px;
+}
+
+nav{
+    background-color: var(--fondo-menu);
+    font-size: 2em;
+    text-align: center;
+}
+.menu{
+    border-bottom: 1px solid var(--color-enlace);
+}
+a {
+    text-decoration: none;
+    color: var(--color-enlace);
+}
+a:hover{
+    color: var(--color-enlace-hover);
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+}
+#principal{
+    padding: 30% 18%;
+    background-image: url(img/casa-bosque-lg.jpg);
+    background-position: center;
+}
+#portada{
+    color: var(--color-titulos-claro);
+    text-align: center;
+    padding: 5%;
+    font-size: 28px;
+    background-color: var(--color-transparencia);
+}
+.casa-cielo{
+    display: flex;
+    align-content: center;
+    text-align: center;
+    width: 90%;
+    border-radius: 10px;
+    margin: 5%;
+}
+.casa-basica{
+    width: 100%;
+    text-align: center;
+}
+#modelos{
+    background-color: var(--blanco);
+}
+.galeria{
+    padding: 0.5em;
+    width: 98%;
+    text-align: center;
+}
+#contacto{
+    background-image: url(img/contacto-xs.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+#escribenos{
+    color: var(--color-opuesto-primario);
+    text-align: center;
+   font-size: 2em;
+}
+#form{
+    text-align: center;
+}
+form{
+    margin: 8%;
+    padding: 20% 8%;
+    border-radius: 10px;
+    color: var(--blanco);
+    background-color: var(--color-transparencia);
+}
+li{
+    list-style: none;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+}
+input{
+    width: 100%;
+}
+button{
+    padding: 0% 42%;
+}
+
+footer{
+    background-color: var(--color-opuesto-primario);
+    color: var(--blanco);
+    text-align: center;
+}
+
+
+/* Media queries xs landscape */
+@media (orientation: landscape) and (min-width: 568px) and (max-width: 812px) {
+    #inicio{
+        height: var(--tam-alto-encabezado-xs);
+    }
+    *{
+        font-size: var(--tam-fuente-xs);
+    }
+    #principal {
+        background-image: url(img/alone-1867464-xs.jpg);
+    }
+}
+
+/* Media queries sm */
+@media (min-width: 576px) {
+    *{
+        font-size: var(--tam-fuente-sm);
+    }
+    #principal {
+        background-image: url(img/casa-bosque-sm.jpg);
+    }
+}
+
+/* Media queries md */
+@media (min-width: 768px) {
+    *{
+        font-size: var(--tam-fuente-md);
+    }
+    #principal {
+        background-image: url(img/casa-bosque-md.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* Media queries lg */
+@media (min-width: 992px) {
+    *{
+        font-size: var(--tam-fuente-lg);
+    }
+    #principal {
+        background-image: url(img/casa-bosque-lg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #flex{
+        display: flex;
+    }
+    nav{
+        position: absolute;
+        right: 1px;
+        text-align: center;
+        background-color: var(--fondo-todo);
+    }
+    .menu{
+        display: inline;
+        font-size: 34px;
+        border-bottom: 0px;
+        padding-right: 10px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+}
+
+/* Media queries xl */
+@media (min-width: 1200px) {
+    *{
+        font-size: var(--tam-fuente-xl);
+    }
+    #principal {
+        background-image: url(img/casa-bosque-lg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #flex{
+        display: flex;
+    }
+    nav{
+        position: absolute;
+        right: 1px;
+        text-align: center;
+        background-color: var(--fondo-todo);
+    }
+    .menu{
+        display: inline;
+        font-size: 34px;
+        border-bottom: 0px;
+        padding-right: 10px;
+    }
+   
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
